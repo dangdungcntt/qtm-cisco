@@ -1,0 +1,9 @@
+#Router as Computer
+1. Turn off Router
+2. WIC-2T x2
+3. Turn on
+(0/0/x phải, 0/1/x trái)
+4. Copy ra thanh 3 router
+5. Mỗi router nối 1 máy tính (cáp chéo (4))
+6. Nối cáp đồng hồ giữa các router (theo chiều kim đồng hồ)
+Sơ đồ mạng https://imgur.com/Za4E76D

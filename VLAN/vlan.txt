@@ -1,0 +1,22 @@
+enable
+conf t
+host S2
+vlan 10
+name GV
+vlan 20
+name SV
+vlan 30
+name NV
+exit
+int range f0/1-8
+switchport access vlan 10
+exit
+int range f0/9-16
+switchport access vlan 20
+exit
+int range f0/17-23
+switchport access vlan 30
+exit
+int f0/24
+switchport mode trunk
+exit

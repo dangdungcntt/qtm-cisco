@@ -1,0 +1,14 @@
+enable
+conf t
+host R3
+int f0/0
+ip address 192.168.5.1 255.255.255.0
+no shutdown
+int s0/0/1
+ip address 192.168.4.2 255.255.255.0
+no shutdown
+exit
+router rip
+network 192.168.4.0
+network 192.168.5.0
+end

@@ -1,0 +1,15 @@
+enable
+conf t
+host R1
+int f0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+int s0/0/0
+ip address 192.168.2.1 255.255.255.0
+clock rate 64000
+no shutdown
+exit
+router rip
+network 192.168.1.0
+network 192.168.2.0
+end

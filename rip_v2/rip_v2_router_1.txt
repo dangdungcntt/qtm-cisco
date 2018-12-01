@@ -1,0 +1,13 @@
+en
+conf t
+int s0/0/0
+no ip address
+ip address 209.165.200.229 255.255.255.252
+clock rate 64000
+no shut
+exit
+router rip
+no net 192.168.2.0
+ver 2
+net 209.165.200.228
+end

@@ -1,0 +1,14 @@
+enable
+conf t
+host HaNoi
+int f0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+int s0/0/0
+ip address 192.168.2.1 255.255.255.252
+clock rate 64000
+no shutdown
+exit
+ip route 192.168.3.0 255.255.255.0 s0/0/0
+ip route 192.168.5.0 255.255.255.0 s0/0/0
+ip route 192.168.4.0 255.255.255.252 s0/0/0

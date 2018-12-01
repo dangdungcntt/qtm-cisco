@@ -1,0 +1,14 @@
+ospf
+trước tiên cấu hình địa chỉ IP cho 3 máy tính, 3 router
+(config): router ospf 1
+(config-router): net 192.168.10.0 0.0.0.3 area 0
+
+#noi rip v2 voi ospf
+DN(config)#router rip
+DN(config-router)#ver 2
+DN(config-router)#net 20.20.20.0
+DN(config-router)#redistribute ospf 1 metric 1
+DN(config-router)#exit
+DN(config)#router ospf 1
+DN(config-router)#net 20.20.20.4 0.0.0.3 area 0
+DN(config-router)#redistribute rip subnets

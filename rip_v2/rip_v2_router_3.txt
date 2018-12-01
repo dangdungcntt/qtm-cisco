@@ -1,0 +1,12 @@
+en
+conf t
+int s0/0/1
+no ip address
+ip address 209.165.200.234 255.255.255.252
+no shut
+exit
+router rip
+no net 192.168.4.0
+ver 2
+net 209.165.200.232
+end
