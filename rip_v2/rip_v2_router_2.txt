@@ -1,5 +1,8 @@
 en
 conf t
+int f0/0
+ip address 192.168.3.1 255.255.255.0
+no shut
 int s0/0/0
 no ip address
 ip address 209.165.200.230 255.255.255.252
@@ -11,8 +14,6 @@ clock rate 64000
 no shut
 exit
 router rip
-no net 192.168.2.0
-no net 192.168.4.0
 ver 2
 net 209.165.200.228
 net 209.165.200.232
